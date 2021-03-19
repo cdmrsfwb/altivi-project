@@ -1,0 +1,114 @@
+html, body, header {
+    height: 60vh;
+}
+
+@media (max-width: 740px) {
+    html, body, header {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html, body, header {
+        height: 100vh;
+    }
+}
+
+.navbar {
+    background-color: white;
+}
+
+.nav-item a strong {
+    color: #2e2e2e;
+    transition: 0.4s;
+}
+
+.nav-item a strong:hover {
+    color: #979797;
+}
+
+.my-footer {
+  background-color: #636363;
+}
+
+.gallery-image {
+    transition: 0.8s;
+}
+
+.gallery-image:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.enlarged-gallery-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 75vw;
+    max-height: 80vh;
+}
+
+
+#modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999999;
+}
+
+#close, #prev, #next {
+    cursor: pointer;
+    position: absolute;
+    padding: 15px;
+    color: #9c757b;
+    font-size: 45px;
+    font-weight: 900;
+    transition: .4s ease;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#close:hover, #prev:hover, #next:hover {color: pink}
+
+#close {right: 15px}
+
+#prev, #next {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#prev {left: 0}
+
+#next {right: 0}
+
+#bg {
+  background: rgb(255, 255, 255) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#slogan {
+    letter-spacing: 0.1em;
+    color:#636363;
+}
+
+#cover-photo {
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    width: 80%;
+    min-width: 800px;
+    min-height: 250px;
+    object-fit: contain;
+}
+
+#map {
+    min-height: 500px;
+}

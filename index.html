@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Altivi Project | Ehituse peatöövõtt ja projektijuhtimine</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="img/altivi-favicon.ico" type="image/x-icon">
+</head>
+
+<body id="bg">
+    <div class="view">
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar">
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect" onclick="displayPage(0)">
+                    <img src="img/altivi-logo.jpg" height=100 alt="Altivi Project Logo">
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto ml-3">
+                        <li class="nav-item">
+                            <i id="slogan">Ehituse peatöövõtt ja projektijuhtimine</i>
+                        </li>
+                        <!-- Not using any left-side links atm
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="/">Avaleht</a>
+                        </li> -->
+                    </ul>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item ml-2">
+                            <a onclick="displayPage(0)" class="nav-link waves-effect">
+                                <strong class="clearfix d-sm-inline-block"> <strong>Avaleht</strong> </strong>
+                            </a>
+                        </li>
+                        <li class="nav-item ml-2">
+                            <a onclick="displayPage(1)" class="nav-link waves-effect">
+                                <strong class="clearfix d-sm-inline-block"> <strong>Tehtud Tööd</strong> </strong>
+                            </a>
+                        </li>
+                        <li class="nav-item ml-2">
+                            <a onclick="displayPage(2)" class="nav-link waves-effect">
+                                <strong class="clearfix d-sm-inline-block"> <strong>Kontakt</strong> </strong>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <div class="mt-5 pt-4"></div>
+        <div class="mt-5 pt-4"></div>
+
+        <!-- Pages -->
+
+        <!-- Avaleht -->
+        <div class="page mt-5 pt-2 wow fadeIn">
+            <img class="shadow rounded" src="img/cover-photo.jpg" id="cover-photo">
+        </div>
+
+        <main class="mt-5 pt-2">
+            <div class="container">
+
+                <!-- Tehtud tööd -->
+                <div class="page row wow fadeIn">
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                        <img class="w-100 shadow rounded mb-4 gallery-image" onclick="openModal(); showPic(0)" src="img/collage.jpg">
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                        <img class="w-100 shadow rounded mb-4 gallery-image" onclick="openModal(); showPic(1)" src="img/2020-10-20.jpg">
+                    </div>
+                </div>
+
+                <div id="modal" onclick="closeModal()">
+                    <span id="close" onclick="closeModal()">&times;</span>
+
+                    <img class="enlarged-gallery-image" onclick=event.stopPropagation(); src="img/collage.jpg">
+                    <img class="enlarged-gallery-image" onclick=event.stopPropagation(); src="img/2020-10-20.jpg">
+
+                    <span id="prev" onclick="event.stopPropagation(); showPic(curPic-1)">&#10094;</span>
+                    <span id="next" onclick="event.stopPropagation(); showPic(curPic+1)">&#10095;</span>
+                </div>
+
+                <!-- Kontakt -->
+                <div class="page row wow fadeIn">
+                    <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                        <div class="ml-5">
+                            <h1 class="mb-5"><strong><strong>Kontakt</strong></strong></h1>
+                            <p><strong><strong>Altivi Project OÜ</strong></strong></p>
+                            <p>+372 504 5298</p>
+                            <p>+358 40 1261512</p>
+                            <p>info@altiviproject.com</p>
+                            <p class="mt-5">Vana-Kangro, 94553 Reina</p>
+                            <p>Saaremaa</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+                        <div id="map" class="shadow rounded">
+                            Insert Map Here
+                        </div>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSDaXVO901kbOytNsOZmCdaIBgNzXZQ7A&callback=initMap&libraries=&v=weekly" async></script>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Pages -->
+
+        <!-- Footer -->
+        <footer class="my-footer text-center font-small mt-4 wow fadeIn fixed-bottom">
+            <div class="footer-copyright text-light py-3">
+                Altivi Project OÜ | +372 504 5298 | +358 40 1261512 | info@altiviproject.com
+            </div>
+        </footer>
+        <!-- Footer -->
+
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <!-- Custom JavaScript -->
+        <script type="text/javascript" src="js/custom.min.js"></script>
+        <!-- Initializations -->
+        <script type="text/javascript">
+            // Animations initialization
+            new WOW().init();
+        </script>
+    </div>
+</body>
+
+</html>
