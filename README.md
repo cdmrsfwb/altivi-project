@@ -1,2 +1,2 @@
 # altivi-project
-Website for Altivi Project OÜ
+A simple static website for Altivi Project OÜ, a construction company
